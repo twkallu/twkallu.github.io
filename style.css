@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(128, 56, 104);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem;
+    gap: 1rem;
+}
+
+.cartao {
+    margin: 1rem 1rem;
+    background-color: rgb(157, 88, 163);
+    height: 15rem;
+    flex-grow: 1;
+    flex-basis: calc(25% - 6rem);
+    border-radius: 0.6rem;
+}
+
+.cartao__conteudo {
+    text-align: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 500ms ease-in-out;
+}
+
+.cartao__conteudo p {
+    margin-top: 1rem;
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+.cartao__conteudo h3 {
+    background-color: rgb(100, 49, 78);
+    text-align: left;
+    padding: 0.5rem;
+    position: absolute;
+    margin: 0.6rem;
+    border-radius: 0.6rem;
+    font-size: 1vw;
+    backface-visibility: hidden;
+}
+
+footer {
+    background-color: rgb(85, 29, 55);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+}
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cartao__conteudo__resposta {
+    transform: rotateY(180deg);
+}
